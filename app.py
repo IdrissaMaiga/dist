@@ -7,18 +7,17 @@ app = Flask(__name__)
 def transcode():
     source_url = request.args.get('url')
     if not source_url:
-        # Return a JSON error response
         return jsonify({"error": "Source URL is required"}), 400
 
-    # Use FFmpeg to transcode
+    # Use FFmpeg to transcode and stream without saving
     command = [
-        'ffmpeg', '-loglevel', 'debug', '-i', source_url, '-c:v', 'libx264', '-f', 'mp4', 'pipe:1'
+        'ffmpeg', '-loglevel', 'error', '-i', source_url, '-c:v', 'libx264', '-f', 'mp4', 'pipe:1'
     ]
 
     try:
         # Run FFmpeg process
         process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        
+
         # Set a timeout for subprocess to avoid indefinite hanging
         stdout, stderr = process.communicate(timeout=300)  # Set timeout (300s = 5 minutes)
 
