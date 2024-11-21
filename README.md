@@ -41,13 +41,13 @@ Follow these steps to run Filmu locally:
 
 1. **Clone the repository**:  
    ```bash
-   git clone https://github.com/your-username/dist.git
-   cd dist
+   git clone https://github.com/your-username/filmu.git
+   cd filmu
    ```
 
 2. **Serve the compiled bundle**:  
    ```bash
-   npx serve dist
+   npx serve filmu
    ```
 
 3. **Access the application**:  
