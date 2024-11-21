@@ -1,5 +1,5 @@
 
-🎥 Filmu  filmu.live
+🎥 Filmu  http://filmu.live
 Welcome to Filmu, a dynamic platform for discovering movies and series, seamlessly connected to your Plex server. Filmu is optimized with cutting-edge search engine features and a robust infrastructure to provide an unparalleled user experience.
 
 🚀 Live Demo
